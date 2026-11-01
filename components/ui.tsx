@@ -90,10 +90,9 @@ export function Section({ id, children, className = "" }: { id?: string; childre
   );
 }
 
-export function SectionHeader({ index, title, className = "" }: { index: string; title: string; className?: string }) {
+export function SectionHeader({ title, className = "" }: { title: string; className?: string }) {
   return (
-    <header className={`mb-10 flex max-w-[960px] flex-col gap-3.5 lg:mb-14 ${className}`}>
-      <p className="font-mono text-[13px] tracking-[0.02em] text-accent">{index}</p>
+    <header className={`mb-10 flex max-w-[960px] flex-col lg:mb-14 ${className}`}>
       <h2 className="text-[30px] leading-[1.1] font-semibold tracking-[-0.03em] text-balance md:text-[44px]">{title}</h2>
     </header>
   );

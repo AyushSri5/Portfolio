@@ -56,7 +56,6 @@ export function RoleLens({ initial = "SDE" }: { initial?: Role }) {
             );
           })}
         </div>
-        <p className="hidden shrink-0 font-mono text-xs tracking-[0.02em] text-subtle md:block">{`// viewing as: ${data.full}`}</p>
       </div>
 
       <div

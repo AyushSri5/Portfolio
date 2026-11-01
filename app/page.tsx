@@ -104,7 +104,7 @@ function Stats() {
 function About() {
   return (
     <Section id="about">
-      <SectionHeader index="// 01 — about" title={about.title} />
+      <SectionHeader title={about.title} />
       <div className="flex flex-col gap-12 lg:flex-row">
         <div className="flex flex-1 flex-col gap-5">
           <p className="text-lg leading-[1.55] md:text-xl">{about.lead}</p>
@@ -112,7 +112,7 @@ function About() {
           <p className="font-mono text-[13px] text-subtle">{about.education}</p>
         </div>
         <Card className="flex flex-col gap-4 p-7 lg:w-[440px]">
-          <p className="font-mono text-[13px] tracking-[0.02em] text-accent">{"// currently sharpening"}</p>
+          <h3 className="text-[17px] font-semibold">Currently sharpening</h3>
           <ul className="flex flex-col gap-4">
             {about.sharpening.map((s) => (
               <li key={s} className="flex items-center gap-3 text-[15px]">
@@ -138,7 +138,7 @@ function FlowArrow() {
 function Experience() {
   return (
     <Section id="experience">
-      <SectionHeader index="// 02 — experience" title="Where I ship." />
+      <SectionHeader title="Where I ship." />
       <div className="flex flex-col gap-6">
         {experience.map((job) => (
           <Card key={job.company} className="flex flex-col gap-8 p-6 md:p-10">
@@ -195,7 +195,7 @@ function Experience() {
 function Projects() {
   return (
     <Section id="projects">
-      <SectionHeader index="// 03 — selected work" title="AI that answers from your material — not from thin air." />
+      <SectionHeader title="AI that answers from your material — not from thin air." />
       <div className="flex flex-col gap-6">
         <article className="flex flex-col gap-9 rounded-[20px] border border-border bg-[linear-gradient(135deg,#171c14,#111413)] p-6 md:p-12">
           <div className="flex flex-col gap-10 lg:flex-row lg:gap-12">
@@ -258,7 +258,7 @@ function Projects() {
 function Stack() {
   return (
     <Section id="stack">
-      <SectionHeader index="// 04 — stack" title="Tools I reach for." />
+      <SectionHeader title="Tools I reach for." />
       <div className="grid overflow-hidden rounded-[20px] border border-border sm:grid-cols-2 lg:grid-cols-3">
         {stack.map((g) => (
           <div key={g.group} className={`-mt-px -ml-px flex flex-col gap-4 border-t border-l border-border p-7 ${g.ai ? "bg-surface" : ""}`}>
@@ -280,7 +280,7 @@ function Stack() {
 function Systems() {
   return (
     <Section id="systems">
-      <SectionHeader index="// 05 — how I think" title="Trade-offs over buzzwords." />
+      <SectionHeader title="Trade-offs over buzzwords." />
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {principles.map((p, i) => (
           <Card key={p.title} className="flex flex-col gap-3.5 p-7">
@@ -308,7 +308,6 @@ function Contact() {
   return (
     <section id="contact" className="mx-auto flex max-w-[1440px] flex-col gap-16 px-5 pt-8 pb-8 md:px-10 lg:gap-24 lg:px-[120px] lg:pt-[120px] lg:pb-12">
       <div className="flex flex-col gap-7 rounded-[22px] bg-accent px-6 py-9 text-ink md:rounded-[28px] md:px-16 md:py-[72px]">
-        <p className="font-mono text-[13px] tracking-[0.02em]">{"// 06 — contact"}</p>
         <h2 className="max-w-[960px] text-[32px] leading-[1.06] font-semibold tracking-[-0.04em] text-balance md:text-[56px]">
           Hiring for backend, AI or forward-deployed engineering? Let’s talk.
         </h2>
@@ -343,7 +342,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Section id="role-fit" className="pb-0 lg:pb-0">
-          <SectionHeader index="// 00 — pick a lens" title="Hiring for something specific? Read this page your way." />
+          <SectionHeader title="Hiring for something specific? Read this page your way." />
           <RoleLens />
         </Section>
         <About />

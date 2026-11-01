@@ -61,12 +61,11 @@ export const consoleLog: { group: string; lines: ConsoleLine[] }[] = [
 
 export const roleLens: Record<
   Role,
-  { tab: string; short: string; full: string; label: string; pitch: string; proofs: [string, string][]; keywords: string[] }
+  { tab: string; short: string; label: string; pitch: string; proofs: [string, string][]; keywords: string[] }
 > = {
   SDE: {
     tab: "SDE",
     short: "SDE",
-    full: "software engineer",
     label: "For SDE / backend teams",
     pitch:
       "A backend engineer who ships and operates production services — event-driven, fast and well documented.",
@@ -83,7 +82,6 @@ export const roleLens: Record<
   AI: {
     tab: "AI Engineer",
     short: "AI Eng",
-    full: "ai engineer",
     label: "For AI / LLM teams",
     pitch: "Builds LLM applications end to end — grounded retrieval, precise ranking and guard-railed answers.",
     proofs: [
@@ -99,7 +97,6 @@ export const roleLens: Record<
   FDE: {
     tab: "Forward Deployed",
     short: "FDE",
-    full: "forward deployed engineer",
     label: "For forward deployed teams",
     pitch:
       "Takes a backend or AI solution from prototype into a real enterprise environment — and explains it clearly along the way.",
