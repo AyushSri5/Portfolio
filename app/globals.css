@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Mirrors the "Portfolio Tokens" variables in the Figma file. */
+@theme {
+  --color-bg: #0a0c0b;
+  --color-surface: #111413;
+  --color-surface-2: #171b19;
+  --color-border: #252b28;
+  --color-text: #eef1ec;
+  --color-muted: #8c948f;
+  --color-subtle: #5d6560;
+  --color-accent: #c2f24b;
+  --color-ink: #0a0c0b;
+  --color-info: #7fb4ff;
+  --color-warn: #ffb84d;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(194 242 75 / 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgb(194 242 75 / 0);
+  }
+}
+
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .cursor,
+  .pulse-dot {
+    animation: none;
+  }
 }
